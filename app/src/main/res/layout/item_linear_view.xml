@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/square_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item 1"
+        android:textColor="@color/black"
+        android:layout_marginStart="12dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_item"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MRP: "
+        android:layout_marginStart="12dp"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item" />
+
+    <TextView
+        android:id="@+id/tv_itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs. 100"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+
+        app:layout_constraintStart_toEndOf="@+id/tv_mrp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item" />
+
+    <TextView
+        android:id="@+id/tv_shipping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Same Day Shipping"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_itemPrice"
+        app:layout_constraintTop_toTopOf="@+id/tv_itemPrice" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_mrp"
+        app:layout_constraintTop_toBottomOf="@id/tv_itemPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

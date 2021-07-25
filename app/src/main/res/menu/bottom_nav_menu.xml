@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:icon="@drawable/circular_image"
+        android:title="" />
+
+    <item
+        android:id="@+id/secondFragment"
+        android:icon="@drawable/circular_image"
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/thirdFragment"
+        android:icon="@drawable/circular_image"
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/fourthFragment"
+        android:icon="@drawable/circular_image"
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/fifthFragment"
+        android:icon="@drawable/circular_image"
+        android:title=""
+        />
+
+</menu>

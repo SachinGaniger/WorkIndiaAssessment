@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@color/toolbar"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_search"
+        app:layout_constraintStart_toStartOf="@+id/et_search" />
+
+    <TextView
+        android:id="@+id/tv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/nav_green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_search"
+        app:layout_constraintEnd_toEndOf="@+id/et_search" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/search_background"
+        android:hint="Search"
+        android:paddingStart="15dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
