@@ -41,11 +41,8 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
                     hideProgressbar()
                     itemResponse.data?.let {
                         linearItemAdapter = LinearItemAdapter(it.data.items)
+                        binding.rvItemList.adapter = linearItemAdapter
 
-                        binding.apply {
-                            rvItemList.layoutManager = LinearLayoutManager(activity)
-                            rvItemList.adapter = linearItemAdapter
-                        }
                     }
 
                 }
@@ -62,7 +59,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
         })
 
-
+        binding.rvItemList.layoutManager = LinearLayoutManager(activity)
 
         return binding.root
     }

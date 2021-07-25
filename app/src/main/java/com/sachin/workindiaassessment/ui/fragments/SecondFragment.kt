@@ -43,11 +43,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
                     hideProgressbar()
                     itemResponse.data?.let {
                         gridItemAdapter = GridItemAdapter(it.data.items)
-
-                        binding.apply {
-                            rvItemList.layoutManager = GridLayoutManager(activity, 3)
-                            rvItemList.adapter = gridItemAdapter
-                        }
+                        binding.rvItemList.adapter = gridItemAdapter
                     }
 
                 }
@@ -64,6 +60,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
         })
 
+        binding.rvItemList.layoutManager = GridLayoutManager(activity, 3)
 
         return binding.root
     }
